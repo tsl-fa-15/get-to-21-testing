@@ -1,8 +1,12 @@
-<h1>Get to 21!</h1>
-<p>Two players switch off making a choice of how much to add. The first player to get to 21 wins!</p>
+<h1><%= @game.main_text %></h1>
+<p>Two players switch off choosing how much to add. The first player to get to 21 wins!</p>
 
-<div id="current-amount"></div>
+<h2 id="current-amount"><%= @current_amount %></h2>
 
-<a id="add-one" href="/?add=1">Add one</a>
-<a id="add-two" href="/?add=2">Add two</a>
-<a id="add-three" href="/?add=3">Add three</a>
+<a id="add-one" href="/?add=1&current=<%= @current_amount %>">Add one</a>
+<a id="add-two" href="/?add=2&current=<%= @current_amount %>">Add two</a>
+<a id="add-three" href="/?add=3&current=<%= @current_amount %>">Add three</a>
+
+<div>
+  <a href="/" id="reset-game">Reset game</a>
+</div>
